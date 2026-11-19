@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pralay Biswas | MCA Student &amp; BCA Graduate Portfolio</title>
+
+  <!-- Load Inter Font from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Load Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          colors: {
+            navy: {
+              950: '#07111d',
+              900: '#0b192c',
+              800: '#10243e',
+              700: '#173254',
+            },
+            cyanTech: {
+              400: '#38bdf8',
+              500: '#0ea5e9',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Subtle circuit-inspired tech background pattern matching the banner aesthetic */
+    .tech-grid-bg {
+      background-color: #0b192c;
+      background-image:
+        radial-gradient(circle at 80% 35%, rgba(14, 165, 233, 0.14) 0%, rgba(11, 25, 44, 0) 55%),
+        linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+      background-size: 100% 100%, 44px 44px, 44px 44px;
+    }
+
+    .glass-card {
+      background: rgba(16, 36, 62, 0.72);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(56, 189, 248, 0.16);
+    }
+
+    .glass-card:hover {
+      border-color: rgba(56, 189, 248, 0.42);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body class="tech-grid-bg text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white">
+
+  <!-- Top Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-navy-950/85 backdrop-blur-md border-b border-sky-400/15">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-2.5 text-white font-bold tracking-tight text-lg rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-sky-500/15 border border-sky-400/30 text-sky-400 text-sm font-extrabold">PB</span>
+        <span>PRALAY BISWAS</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Primary Navigation" class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-sky-400 transition-colors py-2">About</a>
+        <a href="#education" class="hover:text-sky-400 transition-colors py-2">Education</a>
+        <a href="#certifications" class="hover:text-sky-400 transition-colors py-2">Certifications</a>
+        <a href="#skills" class="hover:text-sky-400 transition-colors py-2">Skills</a>
+        <a href="#projects" class="hover:text-sky-400 transition-colors py-2">Projects</a>
+        <a href="#contact" class="px-4 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-navy-950 font-semibold transition-colors">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobileMenuBtn"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+        aria-label="Toggle navigation menu"
+        class="md:hidden p-2.5 rounded-lg text-slate-200 hover:bg-navy-800 border border-sky-400/20 transition-colors"
+      >
+        <svg id="menuIconOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="menuIconClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden bg-navy-950 border-b border-sky-400/15 px-4 pb-4 pt-2 space-y-1">
+      <a href="#about" class="mobile-nav-link block px-3 py-3 rounded-lg text-slate-200 hover:bg-navy-800 hover:text-sky-400 font-medium">About</a>
+      <a href="#education" class="mobile-nav-link block px-3 py-3 rounded-lg text-slate-200 hover:bg-navy-800 hover:text-sky-400 font-medium">Education</a>
+      <a href="#certifications" class="mobile-nav-link block px-3 py-3 rounded-lg text-slate-200 hover:bg-navy-800 hover:text-sky-400 font-medium">Certifications</a>
+      <a href="#skills" class="mobile-nav-link block px-3 py-3 rounded-lg text-slate-200 hover:bg-navy-800 hover:text-sky-400 font-medium">Skills</a>
+      <a href="#projects" class="mobile-nav-link block px-3 py-3 rounded-lg text-slate-200 hover:bg-navy-800 hover:text-sky-400 font-medium">Projects</a>
+      <a href="#contact" class="mobile-nav-link block px-3 py-3 rounded-lg bg-sky-500 text-navy-950 font-semibold text-center mt-2">Contact Me</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="relative overflow-hidden pt-12 pb-16 sm:pt-16 sm:pb-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+
+          <!-- Left Column: Identity & Quick Actions -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/10 border border-sky-400/30 text-sky-300 text-xs sm:text-sm font-medium">
+              <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+              <span>Barrackpore, West Bengal &bull; Open to Opportunities</span>
+            </div>
+
+            <div class="space-y-3">
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white uppercase">
+                Pralay Biswas
+              </h1>
+              <p class="text-xl sm:text-2xl font-semibold text-sky-300">
+                MCA Student @ Vidyasagar University | BCA Graduate
+              </p>
+              <p class="text-base sm:text-lg text-slate-300 font-medium">
+                IBM Certified in Full Stack &amp; Front-End Web Technologies
+              </p>
+            </div>
+
+            <p class="text-slate-300 text-base leading-relaxed max-w-2xl">
+              Passionate about building clean, practical software solutions with Python, core programming fundamentals, modern full-stack web technologies, and structured problem-solving.
+            </p>
+
+            <!-- Action Buttons & Social Links -->
+            <div class="flex flex-wrap items-center gap-3.5 pt-1">
+              <a href="#projects" class="px-5 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-navy-950 font-semibold text-sm sm:text-base transition-all shadow-lg shadow-sky-500/20">
+                View Projects
+              </a>
+              <a href="#certifications" class="px-5 py-3 rounded-xl bg-navy-800 hover:bg-navy-700 text-white border border-sky-400/30 font-semibold text-sm sm:text-base transition-all">
+                Certifications
+              </a>
+              <div class="flex items-center gap-2.5">
+                <a href="https://github.com/PralayIb" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="p-3 rounded-xl bg-navy-800/90 hover:bg-navy-700 text-slate-200 hover:text-sky-400 border border-sky-400/25 transition-colors">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="p-3 rounded-xl bg-navy-800/90 hover:bg-navy-700 text-slate-200 hover:text-sky-400 border border-sky-400/25 transition-colors">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                </a>
+                <a href="mailto:pralaybiswas272@gmail.com" aria-label="Send Email" class="p-3 rounded-xl bg-navy-800/90 hover:bg-navy-700 text-slate-200 hover:text-sky-400 border border-sky-400/25 transition-colors">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Quick Contact Strip -->
+            <div class="pt-3 border-t border-sky-400/15 flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-6 text-sm text-slate-300">
+              <a href="tel:+916289582473" class="inline-flex items-center gap-2 hover:text-sky-400 transition-colors">
+                <svg class="w-4 h-4 text-sky-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span>+91 62895 82473</span>
+              </a>
+              <a href="mailto:pralaybiswas272@gmail.com" class="inline-flex items-center gap-2 hover:text-sky-400 transition-colors break-all">
+                <svg class="w-4 h-4 text-sky-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span>pralaybiswas272@gmail.com</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Tech Accent Card & Portrait Frame -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-full max-w-sm rounded-2xl glass-card p-5 sm:p-6 shadow-2xl">
+              <!-- Decorative Circuit Ring SVG -->
+              <svg class="w-full h-auto rounded-xl bg-navy-950/80 border border-sky-400/20 p-4" viewBox="0 0 360 320" role="img" aria-label="Tech network and profile emblem for Pralay Biswas">
+                <defs>
+                  <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9" />
+                    <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0.2" />
+                  </linearGradient>
+                </defs>
+                <!-- Circuit lines -->
+                <g stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.5" fill="none">
+                  <path d="M20 50 H95 L120 75" />
+                  <path d="M340 65 H275 L250 90" />
+                  <path d="M25 265 H105 L130 240" />
+                  <path d="M335 250 H265 L240 225" />
+                  <circle cx="20" cy="50" r="3" fill="#38bdf8" />
+                  <circle cx="340" cy="65" r="3" fill="#38bdf8" />
+                  <circle cx="25" cy="265" r="3" fill="#38bdf8" />
+                  <circle cx="335" cy="250" r="3" fill="#38bdf8" />
+                </g>
+
+                <!-- Outer & Inner Tech Rings -->
+                <circle cx="180" cy="155" r="96" stroke="url(#ringGrad)" stroke-width="2" stroke-dasharray="10 6" fill="rgba(14, 165, 233, 0.05)" />
+                <circle cx="180" cy="155" r="76" stroke="#38bdf8" stroke-opacity="0.35" stroke-width="1.2" fill="rgba(16, 36, 62, 0.9)" />
+
+                <!-- Stylized Minimalist Avatar Silhouette -->
+                <circle cx="180" cy="134" r="24" fill="#38bdf8" fill-opacity="0.85" />
+                <path d="M134 196 C138 170, 158 162, 180 162 C202 162, 222 170, 226 196" fill="#0ea5e9" fill-opacity="0.75" />
+
+                <!-- Caption inside emblem -->
+                <rect x="74" y="264" width="212" height="34" rx="8" fill="#10243e" stroke="#38bdf8" stroke-opacity="0.3" />
+                <text x="180" y="285" text-anchor="middle" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="12" font-weight="600">
+                  MCA &bull; BCA (MAKAUT) &bull; Python
+                </text>
+              </svg>
+
+              <div class="mt-4 flex items-center justify-between text-xs text-slate-300 px-1">
+                <span>Location: Barrackpore, WB</span>
+                <span class="text-sky-400 font-semibold">MCA @ Vidyasagar Univ.</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-14 sm:py-20 border-t border-sky-400/10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-10">
+          <p class="text-sky-400 text-xs sm:text-sm font-semibold uppercase tracking-wider mb-2">About Me</p>
+          <h2 class="text-2xl sm:text-4xl font-bold text-white">Building Strong Foundations in Computer Applications</h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-7 glass-card rounded-2xl p-6 sm:p-8 space-y-4 text-slate-300 leading-relaxed">
+            <p>
+              Hello! I am <strong class="text-white font-semibold">Pralay Biswas</strong> from <strong class="text-white font-semibold">Barrackpore, West Bengal</strong>. I am currently pursuing my <strong class="text-sky-300 font-semibold">MCA at Vidyasagar University</strong> after completing my <strong class="text-sky-300 font-semibold">BCA from Kingston Educational Institute (MAKAUT)</strong> with a 7.0 CGPA.
+            </p>
+            <p>
+              Alongside my university coursework, I have earned <strong class="text-sky-300 font-semibold">IBM Career Education Program certifications</strong> in <strong class="text-white font-semibold">Front End Technologies</strong> and <strong class="text-white font-semibold">Full Stack Software Developer Capstone</strong>. I enjoy Python development, building responsive web applications, and solving real-world problems through clean, modular code.
+            </p>
+          </div>
+
+          <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+            <div class="glass-card rounded-xl p-5">
+              <div class="text-sky-400 text-xs font-semibold uppercase tracking-wider">Current Focus</div>
+              <div class="text-white font-bold text-lg mt-1">MCA @ Vidyasagar University</div>
+              <p class="text-slate-300 text-sm mt-1">Advancing core computing, software engineering, and full-stack application development skills.</p>
+            </div>
+            <div class="glass-card rounded-xl p-5">
+              <div class="text-sky-400 text-xs font-semibold uppercase tracking-wider">Verified Credentials</div>
+              <div class="text-white font-bold text-lg mt-1">2 IBM Career Education Certificates</div>
+              <p class="text-slate-300 text-sm mt-1">Certified in Front End Technologies &amp; Full Stack Software Developer Capstone.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Academics Section -->
+    <section id="education" class="py-14 sm:py-20 border-t border-sky-400/10 bg-navy-950/40">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-10">
+          <p class="text-sky-400 text-xs sm:text-sm font-semibold uppercase tracking-wider mb-2">Education &amp; Academics</p>
+          <h2 class="text-2xl sm:text-4xl font-bold text-white">Academic Milestones</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- MCA -->
+          <article class="glass-card rounded-2xl p-6 transition-all">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <span class="inline-block px-2.5 py-1 rounded-md bg-sky-500/15 text-sky-300 text-xs font-semibold mb-2">Postgraduate</span>
+                <h3 class="text-xl font-bold text-white">Master of Computer Applications (MCA)</h3>
+                <p class="text-sky-300 font-medium text-sm mt-1">Vidyasagar University</p>
+              </div>
+              <span class="text-xs font-semibold px-3 py-1 rounded-full bg-navy-900 border border-sky-400/25 text-slate-200 shrink-0">2026 &ndash; Present</span>
+            </div>
+            <p class="text-slate-300 text-sm mt-4 leading-relaxed">
+              Focusing on advanced programming, software systems, databases, and full-stack development concepts.
+            </p>
+          </article>
+
+          <!-- BCA -->
+          <article class="glass-card rounded-2xl p-6 transition-all">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <span class="inline-block px-2.5 py-1 rounded-md bg-sky-500/15 text-sky-300 text-xs font-semibold mb-2">Undergraduate</span>
+                <h3 class="text-xl font-bold text-white">Bachelor of Computer Applications (BCA)</h3>
+                <p class="text-sky-300 font-medium text-sm mt-1">Kingston Educational Institute (MAKAUT)</p>
+              </div>
+              <span class="text-xs font-bold px-3 py-1 rounded-full bg-sky-500/20 border border-sky-400/40 text-sky-200 shrink-0">2025 &bull; 7.0 CGPA</span>
+            </div>
+            <p class="text-slate-300 text-sm mt-4 leading-relaxed">
+              Graduated under MAKAUT with core coursework in programming languages, web technologies, operating systems, and software engineering.
+            </p>
+          </article>
+
+          <!-- Class 12 -->
+          <article class="glass-card rounded-2xl p-6 transition-all">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <span class="inline-block px-2.5 py-1 rounded-md bg-sky-500/15 text-sky-300 text-xs font-semibold mb-2">Higher Secondary (WBCHSE)</span>
+                <h3 class="text-xl font-bold text-white">Class XII</h3>
+                <p class="text-sky-300 font-medium text-sm mt-1">Nonachandanpukur Umasashi High School</p>
+              </div>
+              <span class="text-xs font-semibold px-3 py-1 rounded-full bg-navy-900 border border-sky-400/25 text-slate-200 shrink-0">2022</span>
+            </div>
+            <p class="text-slate-300 text-sm mt-4 leading-relaxed">
+              Built analytical and quantitative foundations under WBCHSE prior to entering computer applications at the university level.
+            </p>
+          </article>
+
+          <!-- Class 10 -->
+          <article class="glass-card rounded-2xl p-6 transition-all">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <span class="inline-block px-2.5 py-1 rounded-md bg-sky-500/15 text-sky-300 text-xs font-semibold mb-2">Secondary (WBBSE)</span>
+                <h3 class="text-xl font-bold text-white">Class X</h3>
+                <p class="text-sky-300 font-medium text-sm mt-1">Barrackpore Government High School</p>
+              </div>
+              <span class="text-xs font-semibold px-3 py-1 rounded-full bg-navy-900 border border-sky-400/25 text-slate-200 shrink-0">2020</span>
+            </div>
+            <p class="text-slate-300 text-sm mt-4 leading-relaxed">
+              Completed secondary schooling under WBBSE with discipline, consistency, and strong academic fundamentals.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-14 sm:py-20 border-t border-sky-400/10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-10">
+          <p class="text-sky-400 text-xs sm:text-sm font-semibold uppercase tracking-wider mb-2">Verified Credentials</p>
+          <h2 class="text-2xl sm:text-4xl font-bold text-white">IBM Certifications</h2>
+          <p class="text-slate-300 mt-2 text-sm sm:text-base">Industry-recognized credentials issued by the IBM Career Education Program.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Certificate 1: Full Stack Software Developer Capstone -->
+          <article class="glass-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between transition-all">
+            <div>
+              <div class="flex items-center justify-between gap-3 mb-4">
+                <span class="px-3 py-1 rounded-md bg-sky-500/15 border border-sky-400/30 text-sky-300 font-extrabold tracking-widest text-xs">
+                  IBM
+                </span>
+                <span class="text-xs font-mono text-slate-300 bg-navy-900 px-2.5 py-1 rounded-md border border-sky-400/20">
+                  CD0321EN
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-white">Full Stack Software Developer Capstone</h3>
+              <p class="text-sky-300 text-sm font-medium mt-1">IBM Career Education Program</p>
+              <p class="text-slate-300 text-sm mt-3 leading-relaxed">
+                Successfully completed and received a passing grade in the Full Stack Software Developer Capstone, covering end-to-end web application architecture, backend APIs, and full-stack deployment.
+              </p>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-sky-400/15 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <span class="text-xs text-slate-300">Issued: <strong class="text-white">April 19, 2025</strong></span>
+              <div class="flex items-center gap-2">
+                <button
+                  type="button"
+                  onclick="openCertificateModal('capstone')"
+                  class="px-3.5 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-navy-950 font-semibold text-xs transition-colors"
+                >
+                  Inspect Credential
+                </button>
+                <a
+                  href="https://courses.ibmcep.cognitiveclass.ai/certificates/f85bd90e8606452d8b908e1ae5e4c5fe"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="px-3.5 py-2 rounded-xl bg-navy-800 hover:bg-navy-700 text-sky-300 border border-sky-400/30 font-semibold text-xs transition-colors"
+                >
+                  Verify
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Certificate 2: Front End Technologies -->
+          <article class="glass-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between transition-all">
+            <div>
+              <div class="flex items-center justify-between gap-3 mb-4">
+                <span class="px-3 py-1 rounded-md bg-sky-500/15 border border-sky-400/30 text-sky-300 font-extrabold tracking-widest text-xs">
+                  IBM
+                </span>
+                <span class="text-xs font-mono text-slate-300 bg-navy-900 px-2.5 py-1 rounded-md border border-sky-400/20">
+                  CEFET1IN
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-white">Front End Technologies</h3>
+              <p class="text-sky-300 text-sm font-medium mt-1">IBM Career Education Program</p>
+              <p class="text-slate-300 text-sm mt-3 leading-relaxed">
+                Successfully completed and received a passing grade in Front End Technologies, validating expertise in responsive UI design, semantic HTML5, CSS3, and interactive JavaScript development.
+              </p>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-sky-400/15 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <span class="text-xs text-slate-300">Issued: <strong class="text-white">January 16, 2025</strong></span>
+              <div class="flex items-center gap-2">
+                <button
+                  type="button"
+                  onclick="openCertificateModal('frontend')"
+                  class="px-3.5 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-navy-950 font-semibold text-xs transition-colors"
+                >
+                  Inspect Credential
+                </button>
+                <a
+                  href="https://courses.ibmcep.cognitiveclass.ai/certificates/f95e9d77efc9948b5302e6fa874b5b6a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="px-3.5 py-2 rounded-xl bg-navy-800 hover:bg-navy-700 text-sky-300 border border-sky-400/30 font-semibold text-xs transition-colors"
+                >
+                  Verify
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-14 sm:py-20 border-t border-sky-400/10 bg-navy-950/40">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-10">
+          <p class="text-sky-400 text-xs sm:text-sm font-semibold uppercase tracking-wider mb-2">Core Competencies</p>
+          <h2 class="text-2xl sm:text-4xl font-bold text-white">Skills &amp; Technical Stack</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Category 1: Frontend -->
+          <div class="glass-card rounded-2xl p-6 transition-all">
+            <div class="w-11 h-11 rounded-xl bg-sky-500/15 border border-sky-400/30 flex items-center justify-center text-sky-400 font-bold mb-4">
+              UI
+            </div>
+            <h3 class="text-lg font-bold text-white">Frontend</h3>
+            <p class="text-slate-300 text-sm mt-1.5 mb-4">
+              Responsive, accessible user interfaces and modern component-driven web layouts.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-sky-300 text-xs font-semibold">HTML5</span>
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-sky-300 text-xs font-semibold">CSS3</span>
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-sky-300 text-xs font-semibold">JavaScript</span>
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-slate-200 text-xs font-semibold">React</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Backend & Programming -->
+          <div class="glass-card rounded-2xl p-6 transition-all">
+            <div class="w-11 h-11 rounded-xl bg-sky-500/15 border border-sky-400/30 flex items-center justify-center text-sky-400 font-bold mb-4">
+              &lt;/&gt;
+            </div>
+            <h3 class="text-lg font-bold text-white">Backend &amp; Programming</h3>
+            <p class="text-slate-300 text-sm mt-1.5 mb-4">
+              Server-side logic, API design, relational databases, and structured programming.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-sky-300 text-xs font-semibold">Python</span>
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-sky-300 text-xs font-semibold">Node.js</span>
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-slate-200 text-xs font-semibold">REST APIs</span>
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-slate-200 text-xs font-semibold">SQL</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Tools & Platforms -->
+          <div class="glass-card rounded-2xl p-6 transition-all">
+            <div class="w-11 h-11 rounded-xl bg-sky-500/15 border border-sky-400/30 flex items-center justify-center text-sky-400 font-bold mb-4">
+              DEV
+            </div>
+            <h3 class="text-lg font-bold text-white">Tools &amp; Platforms</h3>
+            <p class="text-slate-300 text-sm mt-1.5 mb-4">
+              Version control, collaborative workflows, IDEs, and command-line environments.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-sky-300 text-xs font-semibold">Git</span>
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-sky-300 text-xs font-semibold">GitHub</span>
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-slate-200 text-xs font-semibold">VS Code</span>
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-slate-200 text-xs font-semibold">Visual Studio</span>
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-slate-200 text-xs font-semibold">PowerShell</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-14 sm:py-20 border-t border-sky-400/10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+          <div class="max-w-2xl">
+            <p class="text-sky-400 text-xs sm:text-sm font-semibold uppercase tracking-wider mb-2">Portfolio Showcase</p>
+            <h2 class="text-2xl sm:text-4xl font-bold text-white">Featured Projects</h2>
+          </div>
+          <p class="text-slate-300 text-sm">Full-Stack Capstone &amp; Front-End Web Engineering</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Featured Project 1: Full Stack Software Developer Capstone -->
+          <article class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all ring-1 ring-sky-400/25">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/20 text-sky-300 border border-sky-400/35">
+                  IBM Certified Capstone Project
+                </span>
+                <span class="text-xs font-mono text-sky-300">CD0321EN</span>
+              </div>
+              <h3 class="text-xl font-bold text-white">Full Stack Software Developer Capstone</h3>
+              <p class="text-slate-300 text-sm mt-2.5 leading-relaxed">
+                End-to-end full-stack web application built for the IBM Career Education Program (<code class="text-sky-300">CD0321EN</code>), integrating responsive front-end interfaces, REST APIs, database persistence, and cloud-ready deployment.
+              </p>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-sky-400/15">
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="text-xs px-2.5 py-1 rounded-md bg-navy-900 text-sky-300 border border-sky-400/20">HTML5</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-navy-900 text-sky-300 border border-sky-400/20">CSS3</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-navy-900 text-amber-300 border border-amber-400/25">JavaScript</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-navy-900 text-emerald-300 border border-emerald-400/25">Python</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-navy-900 text-slate-200 border border-sky-400/15">REST APIs</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-navy-900 text-slate-200 border border-sky-400/15">Full Stack</span>
+              </div>
+              <div class="space-y-2.5">
+                <button
+                  type="button"
+                  onclick="openCapstoneProjectModal()"
+                  class="w-full py-2.5 px-3.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-navy-950 text-xs sm:text-sm font-semibold transition-colors"
+                >
+                  View Architecture &amp; Details
+                </button>
+                <div class="flex gap-2">
+                  <a
+                    href="https://github.com/PralayIb/IBM_Major_Group_8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex-1 py-2 px-3 rounded-xl bg-navy-800 hover:bg-navy-700 text-sky-300 border border-sky-400/30 text-xs font-semibold text-center transition-colors inline-flex items-center justify-center gap-1"
+                  >
+                    <span>GitHub</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 3h7v7m0-7L10 14M5 7v12h12"/></svg>
+                  </a>
+                  <button
+                    type="button"
+                    onclick="openCertificateModal('capstone')"
+                    class="flex-1 py-2 px-3 rounded-xl bg-navy-800 hover:bg-navy-700 text-slate-200 border border-sky-400/25 text-xs font-semibold text-center transition-colors"
+                  >
+                    IBM Credential
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Featured Project 2: Front-End Web Applications & UI Showcase -->
+          <article class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/20 text-sky-300 border border-sky-400/30">
+                  IBM Certified UI
+                </span>
+                <span class="text-xs font-mono text-sky-300">CEFET1IN</span>
+              </div>
+              <h3 class="text-xl font-bold text-white">Front-End Web Applications &amp; UI Showcase</h3>
+              <p class="text-slate-300 text-sm mt-2.5 leading-relaxed">
+                Responsive, mobile-first interfaces crafted with semantic HTML5, CSS3, and interactive JavaScript—applying the engineering standards from the IBM Front End Technologies certification.
+              </p>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-sky-400/15">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs px-2.5 py-1 rounded-md bg-navy-900 text-sky-300 border border-sky-400/20">HTML5</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-navy-900 text-sky-300 border border-sky-400/20">CSS3</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-navy-900 text-amber-300 border border-amber-400/25">JavaScript</span>
+              </div>
+              <button
+                type="button"
+                onclick="openCertificateModal('frontend')"
+                class="w-full py-2.5 px-4 rounded-xl bg-sky-500/15 hover:bg-sky-500/25 text-sky-300 border border-sky-400/35 text-sm font-semibold text-center transition-colors"
+              >
+                View Front-End Credential
+              </button>
+            </div>
+          </article>
+
+          <!-- Upcoming Project Card: MCA Academic & Full-Stack Projects -->
+          <article class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/20 text-sky-300 border border-sky-400/30">
+                  Upcoming Build
+                </span>
+                <span class="text-xs text-amber-300 font-medium">In Progress</span>
+              </div>
+              <h3 class="text-xl font-bold text-white">MCA Academic &amp; Full-Stack Projects</h3>
+              <p class="text-slate-300 text-sm mt-2.5 leading-relaxed">
+                Ongoing postgraduate software engineering builds at Vidyasagar University—combining React front-ends, Python &amp; Node.js REST APIs, and SQL database architectures.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-sky-400/15">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs px-2.5 py-1 rounded-md bg-navy-900 text-sky-300 border border-sky-400/20">React</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-navy-900 text-emerald-300 border border-emerald-400/20">Python &amp; Node.js</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-navy-900 text-slate-200 border border-sky-400/15">SQL</span>
+              </div>
+              <a
+                href="#contact"
+                class="block w-full py-2.5 px-4 rounded-xl bg-navy-800 hover:bg-navy-700 text-sky-300 border border-sky-400/30 text-sm font-semibold text-center transition-colors"
+              >
+                Collaborate on Build
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-14 sm:py-20 border-t border-sky-400/10 bg-navy-950/40">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-10">
+          <p class="text-sky-400 text-xs sm:text-sm font-semibold uppercase tracking-wider mb-2">Core Competencies</p>
+          <h2 class="text-2xl sm:text-4xl font-bold text-white">Skills &amp; Technical Stack</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Category 1: Programming Languages -->
+          <div class="glass-card rounded-2xl p-6 transition-all">
+            <div class="w-11 h-11 rounded-xl bg-sky-500/15 border border-sky-400/30 flex items-center justify-center text-sky-400 font-bold mb-4">
+              &lt;/&gt;
+            </div>
+            <h3 class="text-lg font-bold text-white">Programming Languages</h3>
+            <p class="text-slate-300 text-sm mt-1.5 mb-4">
+              Core languages for algorithms, scripting, and object-oriented software logic.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-sky-300 text-xs font-semibold">Python</span>
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-slate-200 text-xs font-semibold">C</span>
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-slate-200 text-xs font-semibold">Java</span>
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-sky-300 text-xs font-semibold">JavaScript</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Web & Full Stack -->
+          <div class="glass-card rounded-2xl p-6 transition-all">
+            <div class="w-11 h-11 rounded-xl bg-sky-500/15 border border-sky-400/30 flex items-center justify-center text-sky-400 font-bold mb-4">
+              WEB
+            </div>
+            <h3 class="text-lg font-bold text-white">Web &amp; Full Stack</h3>
+            <p class="text-slate-300 text-sm mt-1.5 mb-4">
+              Building responsive interfaces and end-to-end web applications.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-sky-300 text-xs font-semibold">HTML5</span>
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-sky-300 text-xs font-semibold">CSS3</span>
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-sky-300 text-xs font-semibold">Tailwind CSS</span>
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-slate-200 text-xs font-semibold">Front-End Technologies</span>
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-slate-200 text-xs font-semibold">Full Stack Development</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Tools & Platforms -->
+          <div class="glass-card rounded-2xl p-6 transition-all">
+            <div class="w-11 h-11 rounded-xl bg-sky-500/15 border border-sky-400/30 flex items-center justify-center text-sky-400 font-bold mb-4">
+              DEV
+            </div>
+            <h3 class="text-lg font-bold text-white">Tools &amp; Platforms</h3>
+            <p class="text-slate-300 text-sm mt-1.5 mb-4">
+              Development environments, version control, and command-line workflows.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-sky-300 text-xs font-semibold">VS Code</span>
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-slate-200 text-xs font-semibold">Visual Studio</span>
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-sky-300 text-xs font-semibold">Git &amp; GitHub</span>
+              <span class="px-3 py-1.5 rounded-lg bg-navy-950/90 border border-sky-400/25 text-slate-200 text-xs font-semibold">Windows PowerShell</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-14 sm:py-20 border-t border-sky-400/10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+          <div class="max-w-2xl">
+            <p class="text-sky-400 text-xs sm:text-sm font-semibold uppercase tracking-wider mb-2">Portfolio Showcase</p>
+            <h2 class="text-2xl sm:text-4xl font-bold text-white">Featured Projects</h2>
+          </div>
+          <p class="text-slate-300 text-sm">Collaborative &amp; Individual Builds in Web &amp; Python</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Project 1 (Primary): Cinema Hub Website (IBM Major Capstone Group Project) -->
+          <article class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all ring-1 ring-sky-400/25">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/20 text-sky-300 border border-sky-400/35">
+                  IBM Group Project
+                </span>
+                <span class="text-xs font-mono text-sky-300">IBM_Major_Group_8</span>
+              </div>
+              <h3 class="text-xl font-bold text-white">Cinema Hub Website (IBM Major Capstone Group Project)</h3>
+              <p class="text-slate-300 text-sm mt-2.5 leading-relaxed">
+                A collaborative full-stack/front-end movie &amp; cinema web platform built as part of the IBM Career Education Program (Group 8). Developed a responsive interface for browsing movies, showtimes, and cinema details using modern web technologies.
+              </p>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-sky-400/15">
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="text-xs px-2.5 py-1 rounded-md bg-navy-900 text-amber-300 border border-amber-400/25">JavaScript 98.1%</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-navy-900 text-purple-300 border border-purple-400/25">CSS 1.4%</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-navy-900 text-orange-300 border border-orange-400/25">HTML 0.5%</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-navy-900 text-slate-200 border border-sky-400/15">Git &amp; GitHub</span>
+              </div>
+              <div class="flex flex-col sm:flex-row gap-2.5">
+                <button
+                  type="button"
+                  onclick="openCinemaHubModal()"
+                  class="flex-1 py-2.5 px-3.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-navy-950 text-xs sm:text-sm font-semibold transition-colors"
+                >
+                  Project Details
+                </button>
+                <a
+                  href="https://github.com/PralayIb/IBM_Major_Group_8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex-1 py-2.5 px-3.5 rounded-xl bg-navy-800 hover:bg-navy-700 text-sky-300 border border-sky-400/30 text-xs sm:text-sm font-semibold text-center transition-colors inline-flex items-center justify-center gap-1.5"
+                >
+                  <span>GitHub Repo</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 3h7v7m0-7L10 14M5 7v12h12"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Python Modular Calculator -->
+          <article class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/20 text-sky-300 border border-sky-400/30">
+                  Python CLI
+                </span>
+                <span class="text-xs font-mono text-slate-300">caculator.py</span>
+              </div>
+              <h3 class="text-xl font-bold text-white">Python Modular Calculator</h3>
+              <p class="text-slate-300 text-sm mt-2.5 leading-relaxed">
+                A structured Python calculator (<code class="text-sky-300">caculator.py</code>) built with modular arithmetic functions, continuous session loops, and robust validation against zero-division and invalid inputs.
+              </p>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-sky-400/15">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs px-2.5 py-1 rounded-md bg-navy-900 text-sky-300 border border-sky-400/20">Python</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-navy-900 text-slate-200 border border-sky-400/15">Modular Logic</span>
+              </div>
+              <button
+                type="button"
+                onclick="openCalculatorDemoModal()"
+                class="w-full py-2.5 px-4 rounded-xl bg-sky-500 hover:bg-sky-400 text-navy-950 text-sm font-semibold transition-colors"
+              >
+                Live Demo &amp; Code Preview
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 3: Responsive Portfolio Website -->
+          <article class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/20 text-sky-300 border border-sky-400/30">
+                  Front-End UI
+                </span>
+                <span class="text-xs text-emerald-300 font-medium">Live</span>
+              </div>
+              <h3 class="text-xl font-bold text-white">Responsive Portfolio Website</h3>
+              <p class="text-slate-300 text-sm mt-2.5 leading-relaxed">
+                A mobile-first personal portfolio engineered with semantic HTML5, Tailwind CSS glassmorphism cards, interactive credential inspection modals, and clipboard toast notifications.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-sky-400/15">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs px-2.5 py-1 rounded-md bg-navy-900 text-sky-300 border border-sky-400/20">HTML5 &amp; Tailwind</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-navy-900 text-slate-200 border border-sky-400/15">JavaScript</span>
+              </div>
+              <a
+                href="#hero"
+                class="block w-full py-2.5 px-4 rounded-xl bg-sky-500/15 hover:bg-sky-500/25 text-sky-300 border border-sky-400/35 text-sm font-semibold text-center transition-colors"
+              >
+                Explore Live Site
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-14 sm:py-20 border-t border-sky-400/10 bg-navy-950/40">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-10">
+          <p class="text-sky-400 text-xs sm:text-sm font-semibold uppercase tracking-wider mb-2">Contact</p>
+          <h2 class="text-2xl sm:text-4xl font-bold text-white">Let&apos;s Connect</h2>
+          <p class="text-slate-300 mt-2">Reach out for internships, collaborations, projects, or academic inquiries.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <!-- Contact Details Column -->
+          <div class="lg:col-span-5 space-y-4">
+            <div class="glass-card rounded-2xl p-5 flex items-start justify-between gap-3">
+              <div class="min-w-0">
+                <div class="text-xs uppercase tracking-wider text-sky-400 font-semibold">Email</div>
+                <a href="mailto:pralaybiswas272@gmail.com" class="text-white font-medium text-sm sm:text-base hover:text-sky-400 break-all block mt-1">
+                  pralaybiswas272@gmail.com
+                </a>
+              </div>
+              <button
+                type="button"
+                onclick="copyText('pralaybiswas272@gmail.com', 'Email address copied to clipboard!')"
+                class="px-3 py-1.5 rounded-lg bg-navy-800 hover:bg-navy-700 border border-sky-400/25 text-xs font-medium text-sky-300 shrink-0 transition-colors"
+              >
+                Copy
+              </button>
+            </div>
+
+            <div class="glass-card rounded-2xl p-5 flex items-start justify-between gap-3">
+              <div>
+                <div class="text-xs uppercase tracking-wider text-sky-400 font-semibold">Phone</div>
+                <a href="tel:+916289582473" class="text-white font-medium text-sm sm:text-base hover:text-sky-400 block mt-1">
+                  +91 62895 82473
+                </a>
+              </div>
+              <button
+                type="button"
+                onclick="copyText('+91 62895 82473', 'Phone number copied to clipboard!')"
+                class="px-3 py-1.5 rounded-lg bg-navy-800 hover:bg-navy-700 border border-sky-400/25 text-xs font-medium text-sky-300 shrink-0 transition-colors"
+              >
+                Copy
+              </button>
+            </div>
+
+            <div class="glass-card rounded-2xl p-5 flex items-start justify-between gap-3">
+              <div class="min-w-0">
+                <div class="text-xs uppercase tracking-wider text-sky-400 font-semibold">GitHub</div>
+                <a href="https://github.com/PralayIb" target="_blank" rel="noopener noreferrer" class="text-white font-medium text-sm sm:text-base hover:text-sky-400 break-all block mt-1">
+                  github.com/PralayIb
+                </a>
+              </div>
+              <button
+                type="button"
+                onclick="copyText('https://github.com/PralayIb', 'GitHub profile URL copied!')"
+                class="px-3 py-1.5 rounded-lg bg-navy-800 hover:bg-navy-700 border border-sky-400/25 text-xs font-medium text-sky-300 shrink-0 transition-colors"
+              >
+                Copy
+              </button>
+            </div>
+
+            <div class="glass-card rounded-2xl p-5">
+              <div class="text-xs uppercase tracking-wider text-sky-400 font-semibold">Location</div>
+              <p class="text-white font-medium text-sm sm:text-base mt-1">Barrackpore, West Bengal, India</p>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form Column -->
+          <div class="lg:col-span-7">
+            <form id="contactForm" class="glass-card rounded-2xl p-6 sm:p-8 space-y-5" novalidate>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="senderName" class="block text-sm font-medium text-slate-200 mb-1.5">Your Name *</label>
+                  <input
+                    id="senderName"
+                    name="name"
+                    type="text"
+                    required
+                    placeholder="Enter your name"
+                    class="w-full px-4 py-3 rounded-xl bg-navy-950/90 border border-sky-400/25 text-white placeholder-slate-400 focus:outline-none focus:border-sky-400 transition-colors"
+                  />
+                </div>
+                <div>
+                  <label for="senderEmail" class="block text-sm font-medium text-slate-200 mb-1.5">Your Email *</label>
+                  <input
+                    id="senderEmail"
+                    name="email"
+                    type="email"
+                    required
+                    placeholder="you@example.com"
+                    class="w-full px-4 py-3 rounded-xl bg-navy-950/90 border border-sky-400/25 text-white placeholder-slate-400 focus:outline-none focus:border-sky-400 transition-colors"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label for="senderSubject" class="block text-sm font-medium text-slate-200 mb-1.5">Subject</label>
+                <input
+                  id="senderSubject"
+                  name="subject"
+                  type="text"
+                  placeholder="Internship / Collaboration / Inquiry"
+                  class="w-full px-4 py-3 rounded-xl bg-navy-950/90 border border-sky-400/25 text-white placeholder-slate-400 focus:outline-none focus:border-sky-400 transition-colors"
+                />
+              </div>
+
+              <div>
+                <label for="senderMessage" class="block text-sm font-medium text-slate-200 mb-1.5">Message *</label>
+                <textarea
+                  id="senderMessage"
+                  name="message"
+                  rows="4"
+                  required
+                  placeholder="Write your message here..."
+                  class="w-full px-4 py-3 rounded-xl bg-navy-950/90 border border-sky-400/25 text-white placeholder-slate-400 focus:outline-none focus:border-sky-400 transition-colors"
+                ></textarea>
+              </div>
+
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-1">
+                <button
+                  type="submit"
+                  class="px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-navy-950 font-semibold text-sm sm:text-base transition-colors"
+                >
+                  Send Message
+                </button>
+                <a
+                  id="mailtoFallbackLink"
+                  href="mailto:pralaybiswas272@gmail.com"
+                  class="text-xs sm:text-sm text-sky-300 hover:text-sky-200 underline underline-offset-4"
+                >
+                  Or open directly in your email app
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-sky-400/15 bg-navy-950 text-center sm:text-left">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-300">
+      <p>&copy; <span id="currentYear">2026</span> Pralay Biswas. Barrackpore, West Bengal.</p>
+      <div class="flex items-center gap-5">
+        <a href="#hero" class="hover:text-sky-400 transition-colors">Top</a>
+        <a href="#certifications" class="hover:text-sky-400 transition-colors">Certifications</a>
+        <a href="#projects" class="hover:text-sky-400 transition-colors">Projects</a>
+        <a href="#contact" class="hover:text-sky-400 transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Banner -->
+  <div
+    id="toastBanner"
+    role="status"
+    aria-live="polite"
+    class="fixed bottom-5 right-5 z-50 hidden items-center gap-3 px-4 py-3 rounded-xl bg-navy-900 border border-sky-400/45 text-white shadow-2xl max-w-sm"
+  >
+    <span class="w-2.5 h-2.5 rounded-full bg-sky-400 shrink-0"></span>
+    <span id="toastMessage" class="text-sm font-medium text-slate-100"></span>
+  </div>
+
+  <!-- Interactive Credential & Project Modal (Never uses alert()) -->
+  <div
+    id="infoModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+    class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-navy-950/80 backdrop-blur-sm"
+  >
+    <div class="w-full max-w-lg rounded-2xl bg-navy-900 border border-sky-400/35 p-6 shadow-2xl space-y-4 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-start justify-between gap-3">
+        <h3 id="modalTitle" class="text-lg sm:text-xl font-bold text-white">Notice</h3>
+        <button
+          type="button"
+          onclick="closeModal()"
+          aria-label="Close dialog"
+          class="p-1.5 rounded-lg text-slate-300 hover:bg-navy-800 hover:text-white"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div id="modalBody" class="text-sm text-slate-200 leading-relaxed"></div>
+      <div class="pt-2 flex justify-end">
+        <button
+          type="button"
+          onclick="closeModal()"
+          class="px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-navy-950 font-semibold text-sm transition-colors"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Set current footer year safely
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Mobile navigation menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIconOpen = document.getElementById('menuIconOpen');
+    const menuIconClose = document.getElementById('menuIconClose');
+
+    function setMobileMenu(open) {
+      mobileMenu.classList.toggle('hidden', !open);
+      menuIconOpen.classList.toggle('hidden', open);
+      menuIconClose.classList.toggle('hidden', !open);
+      mobileMenuBtn.setAttribute('aria-expanded', String(open));
+    }
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isOpen = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      setMobileMenu(!isOpen);
+    });
+
+    // Close mobile drawer when a navigation link is tapped
+    document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+      link.addEventListener('click', () => setMobileMenu(false));
+    });
+
+    // Toast notification helper
+    let toastTimer = null;
+    function showToast(message) {
+      const toastBanner = document.getElementById('toastBanner');
+      const toastMessage = document.getElementById('toastMessage');
+      toastMessage.textContent = message;
+      toastBanner.classList.remove('hidden');
+      toastBanner.classList.add('flex');
+
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toastBanner.classList.add('hidden');
+        toastBanner.classList.remove('flex');
+      }, 3000);
+    }
+
+    // Custom modal helper (replaces alert/confirm)
+    const infoModal = document.getElementById('infoModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBody = document.getElementById('modalBody');
+
+    function openModal(title, contentHtml, isPlainText = true) {
+      modalTitle.textContent = title;
+      if (isPlainText) {
+        modalBody.textContent = contentHtml;
+        modalBody.classList.add('whitespace-pre-line');
+      } else {
+        modalBody.innerHTML = contentHtml;
+        modalBody.classList.remove('whitespace-pre-line');
+      }
+      infoModal.classList.remove('hidden');
+      infoModal.classList.add('flex');
+    }
+
+    function closeModal() {
+      infoModal.classList.add('hidden');
+      infoModal.classList.remove('flex');
+    }
+
+    infoModal.addEventListener('click', (event) => {
+      if (event.target === infoModal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !infoModal.classList.contains('hidden')) {
+        closeModal();
+      }
+    });
+
+    // Copy helper using execCommand fallback for sandboxed iframes + toast feedback
+    function copyText(text, successLabel) {
+      try {
+        const tempInput = document.createElement('textarea');
+        tempInput.value = text;
+        tempInput.setAttribute('readonly', '');
+        tempInput.style.position = 'absolute';
+        tempInput.style.left = '-9999px';
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        showToast(successLabel);
+      } catch (err) {
+        openModal('Contact Info', `Please copy manually: ${text}`);
+      }
+    }
+
+    // Credential inspection modal for IBM Certificates
+    const certificatesData = {
+      capstone: {
+        title: 'Full Stack Software Developer Capstone',
+        courseId: 'CD0321EN',
+        issueDate: 'April 19, 2025',
+        recipient: 'Pralay Biswas',
+        issuer: 'IBM Career Education Program (Powered by IBM Developer Skills Network / Cognitive Class)',
+        url: 'https://courses.ibmcep.cognitiveclass.ai/certificates/f85bd90e8606452d8b908e1ae5e4c5fe',
+        summary: 'Successfully completed and received a passing grade in Full Stack Software Developer Capstone, demonstrating end-to-end full-stack web application development, cloud deployment, and software engineering practices.'
+      },
+      frontend: {
+        title: 'Front End Technologies',
+        courseId: 'CEFET1IN',
+        issueDate: 'January 16, 2025',
+        recipient: 'Pralay Biswas',
+        issuer: 'IBM Career Education Program (Powered by IBM Developer Skills Network / Cognitive Class)',
+        url: 'https://courses.ibmcep.cognitiveclass.ai/certificates/f95e9d77efc9948b5302e6fa874b5b6a',
+        summary: 'Successfully completed and received a passing grade in Front End Technologies, covering responsive web design, semantic HTML5, CSS3, JavaScript, and modern UI engineering.'
+      }
+    };
+
+    function openCertificateModal(key) {
+      const cert = certificatesData[key];
+      if (!cert) return;
+
+      const html = `
+        <div class="rounded-xl bg-navy-950/90 border border-sky-400/30 p-4 sm:p-5 space-y-3">
+          <div class="flex items-center justify-between border-b border-sky-400/15 pb-3">
+            <span class="font-extrabold tracking-widest text-sky-400 text-lg">IBM</span>
+            <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-400/30 font-semibold">Official Credential</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+            <div>
+              <span class="text-slate-400 block">Recipient</span>
+              <strong class="text-white">${cert.recipient}</strong>
+            </div>
+            <div>
+              <span class="text-slate-400 block">Course ID</span>
+              <strong class="text-sky-300 font-mono">${cert.courseId}</strong>
+            </div>
+            <div>
+              <span class="text-slate-400 block">Issue Date</span>
+              <strong class="text-white">${cert.issueDate}</strong>
+            </div>
+            <div>
+              <span class="text-slate-400 block">Issuer</span>
+              <strong class="text-white">IBM Career Education Program</strong>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 pt-2 border-t border-sky-400/15">${cert.summary}</p>
+          <div class="pt-2 flex flex-wrap items-center gap-2">
+            <a href="${cert.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-navy-950 font-semibold text-xs transition-colors">
+              <span>Open IBM Verification URL</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 3h7v7m0-7L10 14M5 7v12h12"/></svg>
+            </a>
+            <button type="button" onclick="copyText('${cert.url}', 'Certificate verification URL copied!')" class="px-3.5 py-2 rounded-lg bg-navy-800 hover:bg-navy-700 text-sky-300 border border-sky-400/25 font-semibold text-xs transition-colors">
+              Copy URL
+            </button>
+          </div>
+        </div>
+      `;
+      openModal(cert.title, html, false);
+    }
+
+    // Full Stack Software Developer Capstone Architecture & Details Modal
+    function openCapstoneProjectModal() {
+      const html = `
+        <div class="space-y-4">
+          <div class="rounded-xl bg-navy-950/90 border border-sky-400/30 p-4 space-y-3">
+            <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-400/15 pb-3">
+              <div>
+                <span class="text-xs text-slate-400 block">IBM Career Education Program</span>
+                <strong class="text-sky-300 font-mono text-sm">Course Code: CD0321EN &bull; April 19, 2025</strong>
+              </div>
+              <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-400/30 font-semibold">
+                Verified Capstone
+              </span>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              An end-to-end full-stack web application engineered to demonstrate modern client-server architecture, modular RESTful APIs, secure user authentication, and persistent data storage.
+            </p>
+
+            <!-- 4 Key Architecture Modules -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+              <div class="p-3 rounded-lg bg-navy-900/90 border border-sky-400/20">
+                <div class="text-xs font-bold text-sky-400 uppercase tracking-wider mb-1">1. Front-End UI</div>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Responsive HTML5, CSS3, and modular JavaScript views with dynamic state updates and mobile-first layouts.
+                </p>
+              </div>
+              <div class="p-3 rounded-lg bg-navy-900/90 border border-sky-400/20">
+                <div class="text-xs font-bold text-sky-400 uppercase tracking-wider mb-1">2. Backend Services</div>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Python &amp; Node.js RESTful API routes handling CRUD operations, validation, and structured JSON responses.
+                </p>
+              </div>
+              <div class="p-3 rounded-lg bg-navy-900/90 border border-sky-400/20">
+                <div class="text-xs font-bold text-sky-400 uppercase tracking-wider mb-1">3. Database &amp; Auth</div>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Session/token-based user authentication, protected routes, and relational SQL schema persistence.
+                </p>
+              </div>
+              <div class="p-3 rounded-lg bg-navy-900/90 border border-sky-400/20">
+                <div class="text-xs font-bold text-sky-400 uppercase tracking-wider mb-1">4. Deployment</div>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Git/GitHub version control workflow, environment configuration, and cloud-ready production packaging.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2.5">
+            <a
+              href="https://courses.ibmcep.cognitiveclass.ai/certificates/f85bd90e8606452d8b908e1ae5e4c5fe"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-navy-950 font-semibold text-xs transition-colors"
+            >
+              <span>Verify IBM Capstone Credential</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 3h7v7m0-7L10 14M5 7v12h12"/></svg>
+            </a>
+            <a
+              href="https://github.com/PralayIb/IBM_Major_Group_8"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-navy-800 hover:bg-navy-700 text-sky-300 border border-sky-400/30 font-semibold text-xs transition-colors"
+            >
+              <span>View GitHub Repository</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 3h7v7m0-7L10 14M5 7v12h12"/></svg>
+            </a>
+          </div>
+        </div>
+      `;
+      openModal('Full Stack Software Developer Capstone — Architecture', html, false);
+    }
+
+    // Interactive Contact Form validation & submission feedback
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const nameVal = document.getElementById('senderName').value.trim();
+      const emailVal = document.getElementById('senderEmail').value.trim();
+      const subjectVal = document.getElementById('senderSubject').value.trim();
+      const messageVal = document.getElementById('senderMessage').value.trim();
+
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!nameVal) {
+        openModal('Missing Information', 'Please enter your name before sending.');
+        return;
+      }
+      if (!emailVal || !emailPattern.test(emailVal)) {
+        openModal('Invalid Email', 'Please enter a valid email address.');
+        return;
+      }
+      if (!messageVal) {
+        openModal('Missing Message', 'Please write a short message before sending.');
+        return;
+      }
+
+      const mailSubject = encodeURIComponent(subjectVal || `Portfolio Inquiry from ${nameVal}`);
+      const mailBody = encodeURIComponent(
+        `Name: ${nameVal}\nEmail: ${emailVal}\n\nMessage:\n${messageVal}`
+      );
+      document.getElementById('mailtoFallbackLink').href =
+        `mailto:pralaybiswas272@gmail.com?subject=${mailSubject}&body=${mailBody}`;
+
+      contactForm.reset();
+      showToast(`Thank you, ${nameVal}! Your message is ready.`);
+      openModal(
+        'Message Ready',
+        `Thank you, ${nameVal}! Your message has been recorded in this preview.\n\nTo send directly to Pralay Biswas (pralaybiswas272@gmail.com), you can also use the "Or open directly in your email app" link below the form.`
+      );
+    });
+  </script>
+</body>
+</html>
